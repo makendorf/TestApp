@@ -1,0 +1,18 @@
+<Application x:Class="TestApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="clr-namespace:TestApp.ViewModels"
+             xmlns:views="clr-namespace:TestApp.Views">
+    <Application.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVisibility"/>
+        <DataTemplate DataType="{x:Type vm:EmployeeViewModel}">
+            <views:EmployeeView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:CounterpartyViewModel}">
+            <views:CounterpartyView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:OrderViewModel}">
+            <views:OrderView/>
+        </DataTemplate>
+    </Application.Resources>
+</Application>
